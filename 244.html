@@ -1,0 +1,137 @@
+<IMG height=155 hspace=0 src="http://www.apress.com/books/coverGraphics/medium/1893115925.gif" width=125 align=top border=0>
+<FONT face="Arial,Helvetica,Univers,Zurich BT" size=-1>
+<h2>Errata</h2>
+
+<h4>Page 2</h4>
+<p>
+There should be a footnote accompanying Figure 1-1:<br>
+JavaWorld publicly apologized for the biased wording of the survey. Please 
+read <a href = "http://www.javaworld.com/javaworld/jw-08-1998/jw-08-pollresults.html">http://www.javaworld.com/javaworld/jw-08-1998/jw-08-pollresults.html</a> for additional details.
+</p>
+
+<h4>Page 10</h4>
+<p>
+The results of the timing loop performance program are more varied across 
+platforms then I was led to believe. JVMs, JITs, HotSpot, etc. have 
+considerably different results then the hard and fast rule of always count 
+down. For instance, on Solaris with JDK 1.3 and HotSpot, counting down is 
+actually four times slower. (At least from one user's account.)
+</p>
+<p>
+According to Jack Shirazi in the Java Performance Tuning from O'Reilly:
+"Comparison to 0 is faster than comparisons to most other numbers. The VM 
+has optimizations for comparisons to the integers -1, 0, 1, 2, 3, 4, and 5. 
+So rewriting loops to make the test comparison against 0 may be faster."
+For the best results, check your platform specifically and consider adding 
+an outer loop to the test program to time the loops multiple times.
+</p>
+
+<h4>In Listing 2-1, 9th line of code</h4>
+
+<p>There is an "em" dash as the 4th character from end of line. It needs to be
+a "--"  (double minus sign / two characters)</p>
+
+<h4>page 13, fourth line from the bottom</h4>
+
+<p>
+String names = new String[3];<br />
+should be:
+</p>
+<p>
+String names[] = new String[3];
+</p>
+
+<h4>Page 18</h4>
+<p>
+In the first sentence of the last paragraph, it says "For 
+multidimensional arrays, you would just use an extra set of parenthesis...". 
+It should say "an extra set of curly braces." 
+</p>
+
+<h4>In Table 3-1, 3rd row from bottom, last column</h4>
+
+<p>DefaultStyleDocument should be DefaultStyledDocument</p>
+
+<h4>Page 47</h4>
+<p>
+In the code sample at the bottom of the page, the parameter passed 
+to the process method should be i.next() not e.next(). 
+</p>
+ 
+<h4>Page 78</h4>
+<p>
+In table 5-1, the description of the elements method is incorrect. 
+The elements() method allows all of the VALUES to be visited not the keys. 
+</p>
+ 
+<h4>Page 79</h4>
+<p>
+Same problem in table 5-2, the elements method enumerates the 
+values not the keys 
+</p>
+ 
+
+<h4>Page 102, 4th to 7th line</h4>
+<p>
+bytes[3] = (byte)((1 & 0xFF000000) &gt; 24);<br>
+bytes[2] = (byte)((1 & 0x00FF0000) &gt; 16);<br>
+bytes[1] = (byte)((1 & 0x0000FF00) &gt; 8);<br>
+bytes[0] = (byte)((1 & 0x000000FF) &gt; 0);<br>
+</p>
+<p>
+This should be:
+</p>
+<p>
+bytes[3] = (byte)((1 & 0xFF000000) &gt;&gt; 24);<br>
+bytes[2] = (byte)((1 & 0x00FF0000) &gt;&gt; 16);<br>
+bytes[1] = (byte)((1 & 0x0000FF00) &gt;&gt; 8);<br>
+bytes[0] = (byte)((1 & 0x000000FF) &gt;&gt; 0);<br>
+</p>
+
+
+<h4>8th line of listing 5-5 in page 102</h4>
+<p>
+c = (char)((x > 4) & 0xf);
+</p>
+This should be
+
+c = (char)((x >> 4) & 0xf);
+
+
+<h4>Page 110</h4>
+<p>
+Third paragraph from the bottom, should read "For the NAND (not and) operation" rather than "For the NAND (not add) operation"
+</p>
+
+<h4>Page 147</h4>
+<p>In the code sample at the top of the page, the variable name anotherSet is used (3 lines from the bottom) and then I print out a variable called set3...set3 should be anotherSet</p>
+
+<h4>Page 166</h4>
+<p>At the end of the "Removing Another Collection" section. "removeAll() returns true if the underlying LIST changes" (instead of "set")</p>
+
+<h4>Page 209</h4>
+<p>
+The Top Right corner of page has [(H1L)]. This should be Maps I think to coincide with the other pages in chapter.
+</p>
+
+<h4>Page 217</h4>
+<p>About 1/3 of the way down the page, you I a set using the variable name "set" and in the very next line use "set2". set2.addAll(...) should be set.addAll(...)</p>
+
+<h4>Page 229</h4>
+<p>In the "Singleton Collections" section, I say "act similar to the specialized methods for creating empty collections."<br>
+"creating" should be "returning"</p>
+
+<h4>Page 236</h4>
+<p>Top paragraph, below note, 3rd line add "will be negative and" to make the returned value will be negative and can be used</p>
+
+<h4>Page 251</h4>
+<p>First code snippet: I create an array called "array2", but then pass "array" to the sort method <br>
+Change 2nd line to be 
+Arrays.sort(array2, 3, 7);</p>
+
+<h4>Page 376</h4>
+<p>In table A-15 the description of the elements() method is incorrect. <br>
+The elements() method allows all of the VALUES to be visited not the keys.</p>
+
+<h4>Page 379</h4>
+<p>Same problem in table A-19, the elements() method enumerates the values not the keys</p>
